@@ -15,6 +15,7 @@
        	vm.showHome = true;
        	vm.showFixtures = false;
        	vm.showResults = false;
+       	vm.showManU = false;
     
 
        	activate();
@@ -40,6 +41,11 @@
 
         	 	vm.EPLresults = result.data.rounds[0].matches;
         	 });
+
+        	 EPLFactory.getEPLteamInfo().then(function(result){
+
+        	 	vm.EPLteamInfo = result.data.rounds;
+        	 })
 			
 		};
   	

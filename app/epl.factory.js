@@ -12,7 +12,8 @@
         var service = {
             getEPL: getEPL,
             getEPLfixtures: getEPLfixtures,
-            getEPLresults: getEPLresults
+            getEPLresults: getEPLresults,
+            getEPLteamInfo: getEPLteamInfo
 
         };
         return service;
@@ -49,6 +50,18 @@
      		return $http({
       			method: 'GET',
      			url: 'http://soccer.sportsopendata.net/v1/leagues/premier-league/seasons/16-17/rounds/giornata-7'
+     		}).then(function(response){
+
+      			return response.data;
+
+			 });
+         }
+
+                  function getEPLteamInfo() {
+
+     		return $http({
+      			method: 'GET',
+     			url: 'http://soccer.sportsopendata.net/v1/leagues/premier-league/seasons/16-17/rounds?team_identifier=qtjxv9d71ntirsgpjbmeefda4gewdnd9'
      		}).then(function(response){
 
       			return response.data;

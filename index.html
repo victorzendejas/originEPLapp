@@ -54,7 +54,7 @@
 			</div>
 				<div class="col-sm-12 buttonedit">
   						<div class="col-sm-7 btn-group" role="group" aria-label="...">
-						    <button type="button" class="btn btn-info" ng-click="vm.showHome = !vm.showHome">Home</button>
+						    <button type="button" class="btn btn-info" ng-click="vm.showHome = !vm.showHome">News</button>
 							<button type="button" class="btn btn-info" ng-click="vm.showResults = !vm.showResults">Latest Results</button>
 							<button type="button" class="btn btn-info" ng-click="vm.showFixtures = !vm.showFixtures">Next Fixtures</button>
 						    <button type="button" class="btn btn-info" ng-click="vm.showStandings = !vm.showStandings">Standings</button>
@@ -84,7 +84,7 @@
 
 			<div class="col-sm-12">
 			
-				<div class="panel panel-info animated slideInLeft" ng-class="hide" ng-show="vm.showHome">
+				<div class="panel panel-info animated slideInLeft" ng-class="hide" ng-hide="vm.showHome">
 					<div class="panel-heading">
 						<h2 class="text-center"><u>Latest News</u></h2>
 						<h4 class="text-center" style="color: black">Leicester City forward Riyad Mahrez confirms Arsenal approach</h4>
@@ -240,7 +240,7 @@
 
 
 	<div class="navbar-fixed-bottom bg-primary">
-		<div class="col-xs-12 container text-right">
+		<div class="col-xs-12 container text-center">
 			<label> Created by Hadjir and Victor</label>
 		</div>
 	</div>	

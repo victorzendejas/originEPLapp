@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barclay's English Premier League</title>
+<!-- bower:css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css" />
+<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+<!-- endbower -->
+
+<!-- inject:css -->
+<link rel="stylesheet" href="/app/styles/styles.css">
+<!-- endinject -->
+</head>
+
+<body class="ng-cloak" ng-app="app" ng-controller="EPLController as vm">
+<div class="main container">	
+	
+	<div class="navbar-fixed-top bg-primary">
+		<div class="col-xs-12 container">
+			
+
+			<div class="col-xs-2">
+				<img id="logo" src="pictures/logo.png">
+			</div>
+			<div class="col-xs-10">
+
+				<div class="col-xs-12 text-center">
+					<label><img class="teamArs infinite animated pulse" src="pictures/arsenal.png"> </label>
+				    <label><img class="teamBourne infinite animated pulse" src="pictures/bourne.png"> </label>
+				    <label><img class="teamBurn infinite animated pulse" src="pictures/burnley.png"> </label>
+				    <label><img class="teamChels infinite animated pulse" src="pictures/chelsea.png"> </label>
+				    <label><img class="teamCryst infinite animated pulse" src="pictures/crystal.png"> </label>
+				    <label><img class="teamEvert infinite animated pulse" src="pictures/everton.png"></label>
+				    <label><img class="teamHull infinite animated pulse" src="pictures/hull.jpg"> </label>
+					<label><img class="teamLeic infinite animated pulse" src="pictures/lc.png"> </label>
+					<label><img class="teamLiv infinite animated pulse" src="pictures/liv.png"> </label>
+					<label><img class="teamManC infinite animated pulse" src="pictures/manc.png"> </label>
+					<label><img class="teamManU infinite animated pulse" src="pictures/manu.png"> </label>
+					<label><img class="teamMidd infinite animated pulse" src="pictures/midd.png"> </label>
+					<label><img class="teamSouth infinite animated pulse" src="pictures/south.png"> </label>
+					<label><img class="teamStoke infinite animated pulse" src="pictures/stoke.png"> </label>
+					<label><img class="teamSund infinite animated pulse" src="pictures/sund.png"> </label>
+					<label><img class="teamSwan infinite animated pulse" src="pictures/swan.png"> </label>
+					<label><img class="teamSpurs infinite animated pulse" src="pictures/spurs.png"> </label>
+					<label><img class="teamWat infinite animated pulse" src="pictures/wat.png"> </label>
+					<label><img class="teamAlbion infinite animated pulse" src="pictures/albion.png"> </label>
+					<label><img class="teamWest infinite animated pulse" src="pictures/west.png"> </label>
+
+				</div>
+			</div>
+				<div class="col-sm-12">
+  						<div class="col-sm-7 btn-group" role="group" aria-label="...">
+						    <button type="button" class="btn btn-info" ng-click="vm.showHome = !vm.showHome">Home</button>
+						    <button type="button" class="btn btn-info">Teams</button>
+							<button type="button" class="btn btn-info" ng-click="vm.showResults = !vm.showResults">Latest Results</button>
+							<button type="button" class="btn btn-info" ng-click="vm.showFixtures = !vm.showFixtures">Next Fixtures</button>
+						    <button type="button" class="btn btn-info" ng-click="vm.showStandings = !vm.showStandings">Standings</button>
+						</div>
+						<div class="col-sm-5">
+							
+    							<div class="input-group form-group">
+     					 			<input type="text" class="form-control" placeholder="Search for..." ng-model="searchInput">
+      								<span class="input-group-btn">
+        							<button class="btn btn-default" type="button">Search</button>
+      								</span>
+    							</div>
+  							
+						</div>
+				
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+	
+</div>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-sm-6">
+			
+				<div class="panel panel-info animated slideInLeft" ng-class="hide" ng-show="vm.showHome">
+					<div class="panel-heading">
+						<h2 class="text-center"><u>Latest News</u></h2>
+						<h4 style="color: black">Leicester City forward Riyad Mahrez confirms Arsenal approach</h4>
+
+					</div>
+					<div class="panel-body bg-info">
+										
+						<center><img id="mahrez" src="pictures/homepic.jpg"></center>
+					</div>
+					<div class="panel-body bg-info">	
+						<p>Leicester City forward Riyad Mahrez has confirmed Arsenal tried to sign him last summer but the Premier League champions refused to sell.Mahrez, who was a key component in Leicester's march to the title last season, was continually linked with a move to the Emirates Stadium during the transfer window but a move never materialised.However, the Algeria international has revealed there was an approach from Arsenal but he refused to force through a move with Claudio Ranieri determined to keep him at the King Power Stadium.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="panel panel-info animated slideInLeft" ng-class="hide" ng-show="vm.showStandings">
+					<div class="panel-heading">
+						<center><img id="barclay" src="pictures/barclay.png"></center>
+						<p>
+						<center>Standings</center>
+						
+					</div>
+					<div class="panel-body">
+						<table class="table-striped col-xs-12">
+							<tr>
+								<th>Rank</th>
+								<th>Teams</th>
+								<th>W</th>
+								<th>D</th>
+								<th>L</th>
+								<th>Points</th>
+							</tr>
+							
+							<tr ng-repeat="team in vm.EPLstandings">
+								<td>{{team.position}}</td>
+								<td>{{team.team}}</td>
+								<td>{{team.overall.wins}}</td>
+								<td>{{team.overall.draws}}</td>
+								<td>{{team.overall.losts}}</td>
+								<td>{{team.overall.points}}</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="hi container">
+		<div class="row">
+
+			<div class="col-sm-6">
+				<div class="panel panel-info"  ng-show="vm.showFixtures">
+					<div class="panel-heading">
+						<center><img id="barclay" src="pictures/barclay.png"></center>
+						<p>
+						<center>Up-Coming Fixtures</center>
+						
+					</div>
+					<div class="panel-body">
+						<table class="table-striped col-xs-12">
+							<tr>
+								<th>Match Date</th>
+								<th>Match Time</th>
+								<th>Home Team</th>
+								<th>Away Team</th>
+							</tr>
+							
+							<tr ng-repeat="fixture in vm.EPLfixtures">
+								<td>{{ fixture.date_match | date: 'MM/dd/yyyy' }}</td>
+								<td>{{ fixture.date_match | date: 'HH:mm' }}
+								<td>{{ fixture.home_team }}</td>
+								<td>{{ fixture.away_team }}</td>
+								
+							</tr>
+						</table>
+					</div>
+
+				</div>
+				
+			</div>
+			<div class="col-sm-6">
+				<div class="panel panel-info"  ng-show="vm.showResults">
+					<div class="panel-heading">
+						<center><img id="barclay" src="pictures/barclay.png"></center>
+						<p>
+						<center>Latest Results</center>
+						
+					</div>
+					<div class="panel-body">
+						<table class="table-striped col-xs-12">
+							<tr>
+								<th>Match Date</th>
+								<th>Home Team</th>
+								<th>Result</th>
+								<th>Away Team</th>
+							</tr>
+							
+							<tr ng-repeat="result in vm.EPLresults">
+								<td>{{ result.date_match | date: 'MM/dd/yyyy' }}</td>
+								<td>{{ result.home_team }}</td>
+								<td>{{ result.match_result }}
+								<td>{{ result.away_team }}</td>
+								
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+			
+		</div>
+	</div>	
+
+
+
+
+
+	<div class="navbar-fixed-bottom bg-primary">
+		<div class="col-xs-12 container text-right">
+			<label> Created by Hadjir and Victor</label>
+		</div>
+	</div>	
+</div>	
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/AngularJS-Toaster/toaster.js"></script>
+<!-- endbower -->
+<!-- inject:js -->
+<script src="/app/app.js"></script>
+<script src="/app/epl.controller.js"></script>
+<script src="/app/epl.factory.js"></script>
+<!-- endinject -->
+</body>
+</html>

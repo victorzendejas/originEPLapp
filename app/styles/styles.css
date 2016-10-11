@@ -1,3 +1,11 @@
+body
+{
+	background-image: url(http://img09.deviantart.net/ff0c/i/2015/231/e/0/sergio_aguero_2015_16_m9_by_marayu9-d96apuv.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+}
+
 .main
 {
 	padding-top: 100px;
@@ -22,8 +30,8 @@
 
 #logo
 {
-	height: 70px;
-	width: 130px;
+	height: 8rem;
+	width: 100%;
 	margin-left: -10px;
 
 }
@@ -193,14 +201,82 @@
 	margin-top: 6px;
 }
 
+@media only screen and (max-width: 1000px) {
+    body {
+        background-image: url(https://c2.staticflickr.com/4/3815/13166787453_e6c40ce888_b.jpg);
+   		background-size: 100%;
+    }
+    #logo
+{
+	height: 8rem;
+	width: 140px;
+	margin-left: -10px;
 
+}
+}
 
+@media only screen and (max-width: 780px) {
+    body {
+        background-image: url(http://3.bp.blogspot.com/-FnkW98IAjUE/UDzYdmC4TPI/AAAAAAAAENE/Pgftil58B1I/s1920/champions-league-balls-red-1080.jpg);
+   		background-size: 200%;
+   		height: auto;
+   		padding-top: 50px;
+    }
+    #logo
+{
+	height: 7rem;
+	width: 120px;
 
+}
+}
 
+@media only screen and (max-width: 545px) {
+    body {
+        background-image: url();
+   		background-size: 200%;
+   		height: auto;
+   		padding-top: 80px;
+    }
+#logo
+{
+	height: 10rem;
+	width: 20rem;
+	margin: 50%;
 
+}
+.buttonedit
+{
+	width: 100%;
+}
+.iconlogos
+{
+	display: none;
+}
+}
+@media only screen and (max-width: 454px) {
+    body {
+        background-image: url();
+   		background-size: 200%;
+   		height: auto;
+   		padding-top: 130px;
+    }
+    #logo
+{
+	width: 320px;
+	height: 180px;
+	margin-left: 15px;
+	margin-top: -10px;
 
-
-
+}
+.iconlogos
+{
+	display: none;
+}
+.buttonedit
+{
+	width: 80%;
+}
+}
 
 
 

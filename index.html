@@ -38,7 +38,7 @@
 					<label><img class="teamLeic infinite animated pulse" src="pictures/lc.png"> </label>
 					<label><img class="teamLiv infinite animated pulse" src="pictures/liv.png"> </label>
 					<label><img class="teamManC infinite animated pulse" src="pictures/manc.png"> </label>
-					<label><img class="teamManU infinite animated pulse" type="button" ng-src="pictures/manu.png" ng-click="vm.showManU = !vm.showManU"></label>
+					<a ng-click="vm.showManU = !vm.showManU"><img class="teamManU infinite animated pulse" type="button" ng-src="pictures/manu.png"></a>
 					<label><img class="teamMidd infinite animated pulse" src="pictures/midd.png"> </label>
 					<label><img class="teamSouth infinite animated pulse" src="pictures/south.png"> </label>
 					<label><img class="teamStoke infinite animated pulse" src="pictures/stoke.png"> </label>
@@ -54,7 +54,6 @@
 				<div class="col-sm-12">
   						<div class="col-sm-7 btn-group" role="group" aria-label="...">
 						    <button type="button" class="btn btn-info" ng-click="vm.showHome = !vm.showHome">Home</button>
-						    <button type="button" class="btn btn-info">Teams</button>
 							<button type="button" class="btn btn-info" ng-click="vm.showResults = !vm.showResults">Latest Results</button>
 							<button type="button" class="btn btn-info" ng-click="vm.showFixtures = !vm.showFixtures">Next Fixtures</button>
 						    <button type="button" class="btn btn-info" ng-click="vm.showStandings = !vm.showStandings">Standings</button>
@@ -104,7 +103,7 @@
 					<div class="panel-heading">
 						<center><img id="barclay" src="pictures/barclay.png"></center>
 						<p>
-						<center>Standings</center>
+						<center class="font">Standings</center>
 						
 					</div>
 					<div class="panel-body">
@@ -142,7 +141,7 @@
 					<div class="panel-heading">
 						<center><img id="barclay" src="pictures/barclay.png"></center>
 						<p>
-						<center>Upcoming Fixtures</center>
+						<center class="font">Upcoming Fixtures</center>
 						
 					</div>
 					<div class="panel-body">
@@ -151,7 +150,6 @@
 								<th>Match Date</th>
 								<th>Match Time</th>
 								<th>Home Team</th>
-								<th>Results</th>
 								<th>Away Team</th>
 							</tr>
 							
@@ -173,7 +171,7 @@
 					<div class="panel-heading">
 						<center><img id="barclay" src="pictures/barclay.png"></center>
 						<p>
-						<center>Latest Results</center>
+						<center class="font">Latest Results</center>
 						
 					</div>
 					<div class="panel-body">
@@ -206,7 +204,7 @@
 					<div class="panel-heading">
 						<center><img class="teamManU" src="pictures/manu.png"></center>
 						<p>
-						<center>Results and Up-Coming Fixtures</center>
+						<center class="font">Results and Up-Coming Fixtures</center>
 						
 					</div>
 					<div class="panel-body">
